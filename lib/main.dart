@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:idea_app/screen/main_screen.dart';
+import 'package:idea_app/screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'idea App',
-      routes: ,
+      initialRoute: '/',
+      routes: {
+        '/':(context)=> SplashScreen(),
+        '/main':(context)=>MainScreen(),
+      },
     );
   }
 }
